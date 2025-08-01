@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout with Sidebar and Boxes Below Main</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #031322;
+      color: white;
+      padding: 0rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 5px;
+      height: 80px;
+    }
+
+   
+    .layout {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+    }
+
+    .sidebar {
+      
+      background-color: #0b0b0b;
+      padding: 0rem;
+      color: white;
+      text-align: center;
+      width: 340px;
+      margin: 4px;
+      height: 515px;
+
+
+    }
+
+  
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .main {
+      background-color: #101212;
+      padding: 0rem;
+      border-radius: 8px;
+      text-align: center;
+      color: white;
+      height: 330px;
+    margin: -12px;
+    }
+
+    .boxes {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      height: 170px;
+    }
+
+    .box {
+      flex: 1;
+      min-width: 200px;
+      background-color: #0c2828;
+      padding: 0rem;
+      border-radius: 8px;
+      text-align: center;
+      color: white;
+      margin: -2px;
+    }
+
+    .footer {
+      background-color: #2d3436;
+      color: white;
+      padding: 0rem;
+      text-align: center;
+      height: 85px;
+    }
+
+   
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .boxes {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <header class="navbar">Navbar</header>
+
+  <div class="layout">
+
+ 
+    <aside class="sidebar">Sidebar</aside>
+
+   
+    <div class="content-area">
+  
+      <div class="main">Main Section</div>
+      
+    
+      <div class="boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+      </div>
+
+    </div>
+  </div>
+
+ 
+  <footer class="footer">Footer Content</footer>
+
+</body>
+</html>
